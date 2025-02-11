@@ -1,0 +1,54 @@
+# loop version of the above:
+# remove file ext from list of filenames
+# make list of resulting words
+# save ALL words in a new list called all_words
+# 'cat-playing-with-ball-of-yarn.jpg',
+# 'cat-refuses-to-play-with-floppy-fish.jpg',
+# 'suspicious-dog-glancing-sideways.jpeg',
+# 'cute-fluffy-bunny-eating-kale.gif'
+
+# declare a new list for storing ALL words from ALL files
+# []
+# fo
+  # remove ext:
+  # '.'
+  # :
+  # split current file name into list
+  # '-'
+
+# List of filenames
+filenames = [
+    'cat-playing-with-ball-of-yarn.jpg',
+    'cat-refuses-to-play-with-floppy-fish.jpg',
+    'suspicious-dog-glancing-sideways.jpeg',
+    'cute-fluffy-bunny-eating-kale.gif'
+]
+
+# Step 1: Declare a new list for storing all words
+all_words = []
+
+# Step 2: Loop through each filename
+for file in filenames:
+    # Remove file extension
+    file_without_ext = file.split('.')[0]  # Take only the part before the first "."
+
+    # Split by hyphens to extract words
+    words = file_without_ext.split('-')
+
+    # Add words to the list
+    all_words.extend(words)
+
+# Step 3: Remove duplicates by converting to a set, then back to a list
+unique_words = list(set(all_words))
+
+# Step 4: Sort words alphabetically
+unique_words.sort()
+
+# Step 5: Print the final sorted list of unique words
+print("Sorted unique words:", unique_words)
+# get rid of duplicate words
+# al
+
+# sort the words in alphabetical order
+# so
+# pp.
