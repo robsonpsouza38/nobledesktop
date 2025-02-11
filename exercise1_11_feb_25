@@ -1,0 +1,55 @@
+# 8. CHALLENGE: Make Fruit Treats
+fruits = ["apple", "blueberry", "cantaloupe", "cherry", "grape", "kiwi", "mango", "orange", "peach", "pear", "plum", "pineapple", "raspberry", "strawberry", "tangerine"]
+
+# loop the fruits and make  "jam", "popsicles", "jelly" or "jellybeans"
+# according to these conditions:
+
+# - if the fruit is a 'berry', make jam ("strawberry jam")
+# - if it starts with "p", make a popsicle ("plum popsicle")
+# - if the fruit consists of 5 letters or less, make jelly ("apple jelly", "kiwi jelly")
+# - if none of these conditions apply, make jellybean ("cherry jellybean")
+
+# don't just print the fruit treats
+# save the fruit treats to a new list, called treats,
+# rather than just printing the treats; this way,
+# the treats will be available throughout the code
+
+# 9. before starting if-else logic part..
+# sort() fruits and then add more fruits:
+# append() 'watermelon' to end of fruits:
+# insert() 'apricot' at correct spot to maintain A-Z order (without sorting again)
+# insert() 'banana' at correct spot to maintain A-Z order (without sorting again)
+
+# 'watermelon'
+# 'apricot'
+# 'banana'
+print()
+# List of fruits
+fruits = ["apple", "blueberry", "cantaloupe", "cherry", "grape", "kiwi", "mango", "orange",
+"peach", "pear", "plum", "pineapple", "raspberry", "strawberry", "tangerine"]
+
+# Step 1: Sort the fruits list
+fruits.sort()
+
+# Step 2: Add more fruits while maintaining alphabetical order
+fruits.insert(fruits.index("blueberry"), "banana") # Insert 'banana' before 'blueberry'
+fruits.insert(fruits.index("cherry"), "apricot") # Insert 'apricot' before 'cherry'
+fruits.append("watermelon") # Append 'watermelon' at the end
+
+# Step 3: Create the treats list
+treats = []
+
+# Step 4: Process each fruit based on the given conditions
+for fruit in fruits:
+    if "berry" in fruit:
+      treats.append(f"{fruit} jam") # Make jam for berries
+    elif fruit.startswith("p"):
+      treats.append(f"{fruit} popsicle") # Make popsicles for 'p' fruits
+    elif len(fruit) <= 5:
+      treats.append(f"{fruit} jelly") # Make jelly for fruits with 5 or fewer letters
+    else:
+      treats.append(f"{fruit} jellybean") # Make jellybeans for all others
+
+# Step 5: Print the results
+print("Final treats list:")
+print(treats)
